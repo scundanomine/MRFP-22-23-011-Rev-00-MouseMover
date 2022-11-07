@@ -1,0 +1,485 @@
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+    <title>mus movens!</title>
+    <style>
+
+        .arrow {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            width: 12px;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .pointer {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            width: 16px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            margin:0;
+            padding:0;
+            background: #262626;
+            cursor: none;
+        }
+        .button {
+            background: #171515;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            border-width: 0px;
+            font-size: 24px;
+            transform: translateY(0);
+            color: #ffa502;
+            box-shadow: 0 0 50px #d35400;
+            cursor: none;
+            transition: .5s;
+        }
+        .darkened {
+            background: #171515;
+            opacity: 0.2;
+            box-shadow: 0 0 0px 0px !important;
+        }
+
+       .hoverableMainButton:hover {
+            text-shadow: 0 0 5px #d35400;
+            box-shadow: 0 0 50px 20px #d35400;
+        } 
+
+        button:focus{
+            outline: none;
+        }
+
+        .how {
+            background: #171515;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            border-width: 0px;
+            font-size: 18px;
+            transform: translateY(0);
+            color: #ffa502;
+            box-shadow: 0 0 20px #d35400;
+            cursor: none;
+        }
+
+        #ouija {
+            box-shadow: 0 0 20px #d35400;
+        }
+
+        .unselectable {
+            user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -o-user-select: none;
+        }
+
+        @media only screen and (max-width: 760px) {
+            .button {
+                display: none;
+            }
+            .mobile-warning {
+                display: block;
+            }
+        }
+
+    </style><style class="darkreader darkreader--sync" media="screen"></style>
+
+    <script>
+        var recordingStatus = "off" // off, recording, replaying
+        var freshRecording = []
+        var prevTime = undefined
+        var prevX = undefined
+        var prevY = undefined
+        var offsetX = 0
+        var offsetY = 0
+        var userMoveCount = 0
+
+        var hideAllCursors = function() {
+            const pointer = document.getElementById("pointer")
+            const arrow = document.getElementById("arrow")
+            pointer.style.visibility = "hidden";
+            arrow.style.visibility = "hidden";
+        }
+        var paintCursorWithOffset = function(cursor, realX, realY) {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            var x = realX + offsetX
+            var y = realY + offsetY
+            if (x > w-24) {
+                x = Math.max(realX, w-24)
+            }
+            if (y > h-24) {
+                y = Math.max(realY, h-24)
+            }
+            if (x < 0) {
+                x = 0
+            }
+            if (y < 0) {
+                y = 0
+            }
+            cursor.style.top = y + "px"; 
+            cursor.style.left = x + "px"; 
+        }
+        var mouseMovedOnBackground = function(event) {
+            const x = event.clientX
+            const y = event.clientY
+            if (recordingStatus === "recording") {
+                const time = Date.now()
+                const timeDiff = time - prevTime
+                const xDiff = x - prevX
+                const yDiff = y - prevY
+                prevTime = time
+                freshRecording.push([timeDiff, xDiff, yDiff])
+            }
+            prevX = x
+            prevY = y
+            const pointer = document.getElementById("pointer")
+            pointer.style.visibility = "hidden";
+            const arrow = document.getElementById("arrow")
+            arrow.style.visibility = "visible";
+            paintCursorWithOffset(arrow, prevX, prevY)
+            userMoveCount += 1
+        }
+        var mouseMovedOnButton = function(event) {
+            if (recordingStatus === "replaying") {
+                mouseMovedOnBackground(event);
+                return;
+            }
+            const x = event.clientX
+            const y = event.clientY
+            prevX = x
+            prevY = y
+            const arrow = document.getElementById("arrow")
+            arrow.style.visibility = "hidden";
+            const pointer = document.getElementById("pointer")
+            pointer.style.visibility = "visible";
+            paintCursorWithOffset(pointer, x, y)
+            userMoveCount += 1
+        }
+        var getCandidateVal = function(x, y, candidateX, candidateY) {
+            return Math.sqrt((x - candidateX) * (x-candidateX) + (y - candidateY) * (y - candidateY))
+        }
+        var choose = function(previousBestCandidate, candidateX, candidateY, x, y) {
+            const candidateVal = getCandidateVal(x, y, candidateX, candidateY)
+            if (!previousBestCandidate || candidateVal < previousBestCandidate.val) {
+                return {
+                    'val': candidateVal,
+                    'x': candidateX,
+                    'y': candidateY
+                }
+            }
+            return previousBestCandidate
+        }
+        var mouseMovedOnHowdy = function(event) {
+            if (recordingStatus === "replaying") {
+                mouseMovedOnBackground(event);
+                return;
+            }
+            const x = event.clientX
+            const y = event.clientY
+
+            // Offset mouse to the nearest side of howdy-button.
+            const bounds = document.getElementById("how").getBoundingClientRect()
+            var bestCandidate = null
+            bestCandidate = choose(bestCandidate, bounds.left-10, y, x, y) // left
+            bestCandidate = choose(bestCandidate, x, bounds.top-10, x, y) // up
+            bestCandidate = choose(bestCandidate, x, bounds.bottom+10, x, y) // down
+            bestCandidate = choose(bestCandidate, bounds.right+10, y, x, y) // right
+            offsetX = bestCandidate.x - x
+            offsetY = bestCandidate.y - y
+
+            prevX = x
+            prevY = y
+            const pointer = document.getElementById("pointer")
+            pointer.style.visibility = "hidden";
+            const arrow = document.getElementById("arrow")
+            arrow.style.visibility = "visible";
+            paintCursorWithOffset(arrow, x, y)
+            userMoveCount += 1
+        }
+        var recordingIndex = 0
+        var step = 0
+
+        // ***********************This our second function**************
+        var recursiveTimerReplay = function() {
+            const rec = recordings[recordingIndex]
+            if (step >= rec.length) {
+                recordingStatus = "off"
+                document.getElementById("butt").classList.remove("darkened")
+                document.getElementById("butt").classList.add("hoverableMainButton")
+                document.getElementById("howdiv").style.visibility = "visible";
+                if (recordingIndex === 1) {
+                    document.getElementById("ouija").style.visibility = "visible";
+                } 
+                offsetX = 0
+                offsetY = 0
+                paintCursorWithOffset(document.getElementById("arrow"), prevX, prevY)
+                step = 0
+                recordingIndex = (recordingIndex + 1) % recordings.length
+                return
+            }
+            const currTime = Date.now()
+            if (currTime - prevTime >= rec[step][0]) {
+                offsetX = offsetX + rec[step][1]
+                offsetY = offsetY + rec[step][2]
+                step = step + 1
+                paintCursorWithOffset(document.getElementById("arrow"), prevX, prevY)
+                prevTime = currTime
+            }
+            setTimeout(() => { recursiveTimerReplay() }, 0)
+        }
+
+        //*****************************end second event*****************
+
+        //*****************************main event**************************
+        var replayMovements = function(event) {
+            const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if (width < 800 || typeof(prevX) == "undefined" || userMoveCount < 5) {
+                alert("Sorry, we can't do the trick on your device. Please try again with a desktop/laptop that has a mouse attached and has screen width of at least 800 pixels.")
+                return
+            }
+            recordingStatus = "replaying"
+            arrow = document.getElementById("arrow")
+            paintCursorWithOffset(arrow, prevX, prevY)
+            document.getElementById("pointer").style.visibility = "hidden";
+            arrow.style.visibility = "visible";
+            document.getElementById("butt").classList.add("darkened")
+            document.getElementById("butt").classList.remove("hoverableMainButton")
+            document.getElementById("howdiv").style.visibility = "hidden";
+            document.getElementById("ouija").style.visibility = "hidden";
+            prevTime = Date.now()
+            recursiveTimerReplay()
+        }
+
+        //*************************************main event ended***********
+
+        var recordMovements = function(event) {
+            const REC_TIME = 15000
+            freshRecording = []
+            recordingStatus = "recording"
+            prevTime = Date.now()
+            document.getElementById('recordButton').style.display = 'none'; 
+            document.getElementById('buttdiv').style.display = 'none';
+            for (var j=REC_TIME; j>0; j-=1000) {
+                const bah = REC_TIME - j
+                setTimeout(() => console.log(bah / 1000), bah)
+            }
+            setTimeout(() => {
+                document.getElementById('buttdiv').style.display = 'block'; 
+                recordingStatus = false;
+                recordings.push(freshRecording)
+                console.log('finished recording');
+                console.log(freshRecording)
+            }, REC_TIME)
+        }
+
+        document.addEventListener('contextmenu', e => {
+            if (recordingStatus == 'replaying') {
+                e.preventDefault();
+            }
+        });
+
+    </script>
+<meta name="darkreader" content="568a4df73b444ee5bab92bde4ff648fe"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head>
+<body>
+
+    <div id="bg" style="position: absolute; width: 100%; height: 100%"></div>
+
+    <button id="recordButton" style="position: absolute; top: 45%; left: 37%; z-index: 999; display: none;">
+        Record
+    </button>
+
+    <noscript><h1>This website requires JavaScript in order to do a trick. Please enable JavaScript and refresh.</h1></noscript>
+
+    <h1 class="mobile-warning" style="display: none;">
+        This website requires a laptop/desktop device with a mouse, and a sufficiently large screen. Try with another device?
+    </h1>
+
+    <div id="buttdiv" class="unselectable" style="position: absolute; width: 400px; height: 100px; top: 50%; left: 50%; margin: -50px 0 0 -200px;">
+        <button id="butt" class="button hoverableMainButton unselectable" tabindex="-1">
+            I'm not afraid to click<br>buttons on the internet
+        </button>
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Explanation video (all the answers you need are here)" style="display: none;"></a>
+    <div id="howdiv" class="unselectable" style="position: absolute; width: 200px; height: 50px; right: 50px; bottom: 50px; margin: -50px 0 0 -200px; visibility: hidden;">
+        <button id="how" class="how unselectable" tabindex="-1">
+            How this works
+        </button>
+    </div>
+
+    <div id="ouija" class="unselectable" style="position: absolute; left: 50px; bottom: 50px; visibility: hidden;">
+        <a href="https://ouija.attejuvonen.fi/" target="_blank">
+            <img src="A%20test%20of%20courage_files/ouija.jpg" style="width: 100px; cursor: none;">
+        </a>
+    </div>
+    <script>
+
+        document.body.addEventListener('mouseleave', e => { hideAllCursors() })
+        document.getElementById('bg').addEventListener('mousemove', e => { mouseMovedOnBackground(e) })
+        document.getElementById('butt').addEventListener('mousemove', e => { mouseMovedOnButton(e) })
+        document.getElementById('butt').addEventListener('click', e => { replayMovements(e) })
+        document.getElementById('recordButton').addEventListener('click', e => { recordMovements(e) })
+        document.getElementById('how').addEventListener('mousemove', e => { mouseMovedOnHowdy(e) })
+        document.getElementById('how').addEventListener('mouseleave', e => { offsetX = 0; offsetY = 0; })
+        document.getElementById('ouija').addEventListener('mousemove', e => { mouseMovedOnButton(e) })
+
+    </script>
+    <script src="A%20test%20of%20courage_files/recordings.js"></script>
+
+    <img id="arrow" class="arrow" src="A%20test%20of%20courage_files/arrow_m.png" style="visibility: visible; top: 333px; left: 447px;">
+    <img id="pointer" class="pointer" src="A%20test%20of%20courage_files/pointer.png" style="visibility: hidden; top: 207px; left: 683px;">
+
+    <script async="" defer="defer" data-domain="attejuvonen.fi" src="A%20test%20of%20courage_files/plausible.js"></script>
+    
+
+</body></html>
